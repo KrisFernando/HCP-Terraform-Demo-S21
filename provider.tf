@@ -7,10 +7,10 @@ terraform {
   }
 }
 
-provider "vault" {}
+# provider "vault" {}
 
 provider "aws" {
   region = "us-east-2"
-  access_key = data.vault_generic_secret.awsvault.data["key"]
-  secret_key = data.vault_generic_secret.awsvault.data["secret"]
+  access_key = data.hcp_vault_secrets_app.awsvault.secrets["key"]
+  secret_key = data.hcp_vault_secrets_app.awsvault.secrets["secret"]
 }
