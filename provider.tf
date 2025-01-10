@@ -12,3 +12,5 @@ provider "aws" {
   access_key = var.key
   secret_key = var.secret
 }
+
+provider "vault" {}
