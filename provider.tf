@@ -7,7 +7,7 @@ terraform {
   }
 }
 
-# provider "vault" {}
+provider "hcp" {}
 
 provider "aws" {
   region = "us-east-2"
